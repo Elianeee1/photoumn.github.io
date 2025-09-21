@@ -5,11 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Photo@UMN • Home</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; line-height: 1.5; }
+    .site-header, .site-footer { background: #7A0019; color: #fff; padding: 1rem 2rem; }
+    .site-header a { color: #fff; margin-right: 1rem; text-decoration: none; }
+    .site-header a.join-btn { background: #FFCC33; color: #000; padding: 0.4rem 0.8rem; border-radius: 6px; }
+    .hero { background: url('images/hero.jpg') center/cover no-repeat; color: #fff; text-align: center; padding: 8rem 2rem; }
+    .btn { display: inline-block; background: #FFCC33; color: #000; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: bold; }
+    .container { padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .grid { display: grid; gap: 2rem; }
+    .grid.three { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card { padding: 1rem; border: 1px solid #ddd; border-radius: 8px; background: #fafafa; }
+    .callout { background: #f0f0f0; text-align: center; padding: 3rem 2rem; margin: 3rem 0; }
+
+    /* People section */
+    .people { text-align: center; }
+    .person { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1rem; transition: transform 0.2s; }
+    .person:hover { transform: translateY(-5px); }
+    .person img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; }
+    .person h3 { margin: 0.5rem 0 0; color: #7A0019; }
+    .person p.role { font-weight: bold; margin: 0.2rem 0; color: #555; }
+    .person p.bio { font-size: 0.9rem; color: #444; }
+    .person a { display: inline-block; margin-top: 0.5rem; color: #7A0019; text-decoration: none; font-size: 0.9rem; }
+
+    /* Gallery preview */
+    .gallery-preview { text-align: center; }
+    .gallery-preview img { width: 100%; border-radius: 8px; transition: transform 0.3s, opacity 0.3s; }
+    .gallery-preview img:hover { transform: scale(1.05); opacity: 0.9; }
+    .gallery-caption { margin-top: 0.5rem; font-size: 0.9rem; color: #333; }
+  </style>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <a class="logo" href="index.html">Photo@UMN</a>
-    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <a class="logo" href="index.html"><strong>Photo@UMN</strong></a>
     <nav class="site-nav">
       <a href="index.html" class="active">Home</a>
       <a href="events.html">Events</a>
@@ -18,6 +47,7 @@
     </nav>
   </header>
 
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-inner">
       <h1>Capture the moment.</h1>
@@ -26,7 +56,9 @@
     </div>
   </section>
 
+  <!-- Main -->
   <main class="container">
+    <!-- Cards -->
     <section class="grid three">
       <article class="card">
         <h3>Weekly Meetups</h3>
@@ -45,17 +77,72 @@
       </article>
     </section>
 
+    <!-- Callout -->
     <section class="callout">
       <h2>New? Start here.</h2>
       <p>No experience needed. We have beginners, hobbyists, and aspiring pros.</p>
       <a href="join.html" class="btn">Become a member</a>
     </section>
+
+    <!-- People -->
+    <section class="people">
+      <h2>Meet Our Team</h2>
+      <div class="grid three">
+        <article class="person">
+          <img src="images/alice.jpg" alt="Alice portrait">
+          <h3>Alice</h3>
+          <p class="role">President</p>
+          <p class="bio">Loves film photography and black-and-white portraits.</p>
+          <a href="https://instagram.com/alice" target="_blank">📸 Instagram</a>
+        </article>
+        <article class="person">
+          <img src="images/bob.jpg" alt="Bob portrait">
+          <h3>Bob</h3>
+          <p class="role">Vice President</p>
+          <p class="bio">Street photographer who documents campus life.</p>
+          <a href="mailto:bob@umn.edu">✉ Email</a>
+        </article>
+        <article class="person">
+          <img src="images/charlie.jpg" alt="Charlie portrait">
+          <h3>Charlie</h3>
+          <p class="role">Events Coordinator</p>
+          <p class="bio">Organizes photo walks and gallery exhibitions.</p>
+          <a href="https://instagram.com/charlie" target="_blank">📸 Instagram</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-preview">
+      <h2>Club Gallery</h2>
+      <div class="grid three">
+        <div>
+          <img src="images/photo1.jpg" alt="Sunset over campus" />
+          <p class="gallery-caption">Sunset over campus</p>
+        </div>
+        <div>
+          <img src="images/photo2.jpg" alt="Student photographer" />
+          <p class="gallery-caption">Student photographer in action</p>
+        </div>
+        <div>
+          <img src="images/photo3.jpg" alt="City lights" />
+          <p class="gallery-caption">City lights at night</p>
+        </div>
+      </div>
+      <p style="margin-top:1rem;">
+        <a href="gallery.html" class="btn">View full gallery</a>
+      </p>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <p>© <span id="year"></span> Photo@UMN • Minneapolis, MN</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
