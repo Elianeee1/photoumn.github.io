@@ -20,22 +20,27 @@
 
   <main class="container">
     <h1>Gallery</h1>
-    <p>Monthly theme: <strong>“Light & Shadow”</strong>. Tag submissions on IG with <code>#photoUMN</code>.</p>
+    <p>Submit your photos via our form; we feature new work monthly.</p>
 
-    <section class="masonry">
-      <!-- Replace src with your images or local /images/* files -->
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80" alt="City" />
-      <img src="https://images.unsplash.com/photo-1520975932065-79f2e458ef54?w=1200&q=80" alt="Portrait" />
-      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=80" alt="Laptop" />
-      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80" alt="Forest" />
-      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&q=80" alt="Bridge" />
-      <img src="https://images.unsplash.com/photo-1549888834-3ec93abae044?w=1200&q=80" alt="Night trail" />
-    </section>
+    <!-- Add or duplicate these <figure> blocks. Place images in /images -->
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="images/photo1.jpg" alt="Caption 1"><figcaption class="cap">Caption 1</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/photo2.jpg" alt="Caption 2"><figcaption class="cap">Caption 2</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/photo3.jpg" alt="Caption 3"><figcaption class="cap">Caption 3</figcaption>
+      </figure>
+      <!-- add more figures as needed -->
+    </div>
   </main>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> Photo@UMN</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
