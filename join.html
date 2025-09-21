@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photo@UMN • Join</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Photo@UMN</a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="join.html" class="join-btn active">Join</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Join the Club</h1>
+    <p>Fill this quick form to get event info and share your photos.</p>
+
+    <!-- If you have a Google Form, paste its embed code here -->
+    <form class="join-form" onsubmit="alert('Thanks! We’ll be in touch.'); return false;">
+      <label>
+        Name
+        <input type="text" required />
+      </label>
+      <label>
+        Email
+        <input type="email" required />
+      </label>
+      <label>
+        What do you shoot with?
+        <select>
+          <option>Phone</option>
+          <option>DSLR / Mirrorless</option>
+          <option>Film</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>
+        Interests
+        <textarea rows="4" placeholder="Portraits, street, landscape…"></textarea>
+      </label>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:photo-umn@example.edu">photo-umn@example.edu</a></p>
+      <p>Instagram group: add your link here</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Photo@UMN</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
