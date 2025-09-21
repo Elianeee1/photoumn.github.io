@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Photo@UMN</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photo@UMN • Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello from Photo@UMN!</h1>
-  <p>This is our very first GitHub Pages website 🎉</p>
+  <header class="site-header">
+    <a class="logo" href="index.html">Photo@UMN</a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="join.html" class="join-btn">Join</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Capture the moment.</h1>
+      <p>We’re a student photography club sharing skills, stories, and shoots.</p>
+      <a href="join.html" class="btn">Join the club</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="grid three">
+      <article class="card">
+        <h3>Weekly Meetups</h3>
+        <p>Casual hangouts, skill shares, and photo critiques. All levels welcome.</p>
+        <a href="events.html" class="link">See schedule →</a>
+      </article>
+      <article class="card">
+        <h3>Photo Walks</h3>
+        <p>Explore campus and the city together. Bring any camera—even your phone.</p>
+        <a href="events.html#walks" class="link">Next walk →</a>
+      </article>
+      <article class="card">
+        <h3>Show & Exhibit</h3>
+        <p>Submit to our monthly themes and end-of-semester showcase.</p>
+        <a href="gallery.html" class="link">View gallery →</a>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>New? Start here.</h2>
+      <p>No experience needed. We have beginners, hobbyists, and aspiring pros.</p>
+      <a href="join.html" class="btn">Become a member</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Photo@UMN • Minneapolis, MN</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
